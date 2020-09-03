@@ -3,13 +3,12 @@ const axios = require('axios');
 const qs = require('querystring');
 
 const methods = {
-  POST() {
+  POST(body) {
     return new Promise(async (resolve, reject) => {
       try {
         const requestBody = {
-          message: 'ลงทะเบียน',
+          message: 'ลงทะเบียนเว็บไซต์ \nคุณ '+ body.name + ' \nเบอร์โทร : '+body.phone +" \nข้อความ : "+body.message
         };
-
         var rs = await axios
           .post('https://notify-api.line.me/api/notify', qs.stringify(requestBody), {
             headers: {
@@ -18,8 +17,7 @@ const methods = {
             },
           })
           .then((result) => {
-            // Do somthing
-            console.log('result ', result);
+            return result['data']
           })
           .catch((err) => {
             // Do somthing

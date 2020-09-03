@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "env NODE_ENV=prod PORT=3000  node app.js",
-    "start:dev": "env NODE_ENV=dev  PORT=3001  nodemon app.js",
+    "dev": "env NODE_ENV=dev  PORT=3000  nodemon app.js",
     "test": "env NODE_ENV=test PORT=8081 mocha --reporter spec",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore",
     "precommit-msg": "echo 'Pre-commit Checks Validate Pattern ESlint...' && exit 0"
