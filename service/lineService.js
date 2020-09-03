@@ -7,7 +7,7 @@ const methods = {
     return new Promise(async (resolve, reject) => {
       try {
         const requestBody = {
-          message: 'ลงทะเบียนเว็บไซต์ \nคุณ '+ body.name + ' \nเบอร์โทร : '+body.phone +" \nข้อความ : "+body.message
+          message: 'ลงทะเบียนเว็บไซต์ \nคุณ '+ body.your_name + ' \nเบอร์โทร : '+body.your_phone +" \nข้อความ : "+body.your_message
         };
         var rs = await axios
           .post('https://notify-api.line.me/api/notify', qs.stringify(requestBody), {
