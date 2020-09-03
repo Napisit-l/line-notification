@@ -1,0 +1,54 @@
+{
+  "name": "line-notify",
+  "version": "1.0.0",
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "scripts": {
+    "start": "env NODE_ENV=prod PORT=3000  node app.js",
+    "start:dev": "env NODE_ENV=dev  PORT=3001  nodemon app.js",
+    "test": "env NODE_ENV=test PORT=8081 mocha --reporter spec",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
+    "precommit-msg": "echo 'Pre-commit Checks Validate Pattern ESlint...' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "http-errors": "~1.6.2",
+    "pg": "^8.2.2",
+    "pg-hstore": "^2.3.3",
+    "prom-client": "^12.0.0",
+    "pug": "2.0.0-beta11",
+    "querystring": "^0.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chalk": "^4.1.0",
+    "eslint": "^7.2.0",
+    "lodash": "^4.17.19",
+    "mocha": "^5.2.0",
+    "moment": "^2.27.0",
+    "nodemon": "^2.0.4",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.0.5",
+    "restify": "^6.3.4",
+    "restify-cors-middleware": "^1.0.1",
+    "restify-errors": "^5.0.0",
+    "supertest": "^3.0.0"
+  },
+  "teamname": "teamslug"
+}
