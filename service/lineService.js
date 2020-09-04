@@ -13,7 +13,7 @@ const methods = {
           .post('https://notify-api.line.me/api/notify', qs.stringify(requestBody), {
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
-              Authorization: 'Bearer ZLHL4rIQDhrAL5xi9Z8yV8ybnKqKutyKxTCI56BCZQs',
+              Authorization: 'Bearer GCop3Iz8TJdcXwhpbiAtNhD8mNwDa7T6BHMsVb0SNQz',
             },
           })
           .then((result) => {
